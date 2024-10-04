@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center;      /* Căn giữa theo chiều dọc */
+    height: 100vh;            /* Chiều cao toàn màn hình */
+    margin: 0;
+}
+
+.wrapper {
+    width: 100%;               /* Đặt chiều rộng cho layout */
+}
+
+.header {
+    background-color: yellow;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    height: 400px; /* Kéo dài chiều cao cho toàn bộ container */
+}
+
+.sidebar1 {
+    background-color: pink;
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+    weight:20%;
+}
+
+.main-content {
+    background-color: purple;
+    flex: 2;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+    weight:60%;
+}
+
+.sidebar2 {
+    background-color: lightgreen;
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+    weight:20%;
+}
+
+.footer {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+}
+/* Media query: điều chỉnh layout cho màn hình rộng hơn 768px */
+@media (min-width: 768px) {
+    .sidebar1, .main-content, .sidebar2 {
+        flex: 1;               /* Các phần sẽ trở lại dạng lưới ngang trên màn hình rộng */
+    }
+
+    .main-content {
+        flex: 2;               /* Nội dung chính tiếp tục chiếm nhiều diện tích hơn */
+    }
+}
